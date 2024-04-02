@@ -24,21 +24,31 @@ html, body{
 
 .left{
     width: 50%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 
 .right{
     width: 50% ;
-    padding: 0 40px;
+    /* padding: 0 40px; */
     background-color: aquamarine;
 }
+
+.right h3{
+    padding: 0 10px;
+}
+
+.right h5{
+    padding: 0 40px;
+    margin: 10px 0px;
+}
+
 .list{
     width: 100%;
     height: 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: aqua; */
+    background-color: rgba(172, 169, 169, 0.692);
     padding: 20px;
     margin: 2px;
 }
@@ -52,4 +62,3 @@ button{
     font-size: .8vw;
     margin-left: 92%;
 }
-
