@@ -1,30 +1,28 @@
-var checkBoxs = document.querySelectorAll("input[name='checkBox']");
-var button = document.querySelector("button");
+var arr = [
+    {item: "Bag"},
+    {item: "Apple"},
+    {item: "Android"}
+]
 
-var label = document.querySelectorAll('.item');
 
+var selected = 0;
+var left = document.querySelector(".left .main-list")
+var clutter = ' '
+var listArr = []
+var checkBoxes = document.querySelectorAll('input[name="checkBox"]');
 
-var labelText = label.textContent;
-
-var right = document.querySelector(".right added-list");
-var value = 0
-checkBoxs.forEach(function(checkbox){
-    value = checkbox.addEventListener("change", function(elem){
-        if(elem.target.checked){
-            console.log("ha bhai")
-        } else{
-            console.log("na bhai")
-        }
-
-        label.forEach(function(label){
-            console.log(label)
-        })
-
-        button.addEventListener("click", function(){
-            // console.log("hello")
-            // right.innerHTML = `<h5> ${list} </h5>`
-
-        })
-    })
+arr.forEach(function(elem,idx){
+    clutter += `
+    <div class="list">
+                    <form action="">
+                        <label class="item" for="items">
+                            ${idx + 1}. ${elem.item} 
+                        </label>
+                        <input type="checkbox" name="checkBox" id="items">
+                    </form>
+</div>
+    `
+    console.log(elem)
     
 })
+left.innerHTML = clutter;
